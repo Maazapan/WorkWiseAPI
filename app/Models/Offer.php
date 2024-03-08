@@ -13,6 +13,7 @@ class Offer extends Model
         'user_id',
         'job_id',
         'company_id',
+        'categorie_id',
     ];
 
 
@@ -24,9 +25,11 @@ class Offer extends Model
         return $this->belongsTo(Job::class);
     }
 
-    public function company(){
+    public function companie(){
         return $this->belongsTo(Company::class);
     }
 
-    
+    public function categorie(){
+        return $this->belongsTo(Category::class);
+    }
 }

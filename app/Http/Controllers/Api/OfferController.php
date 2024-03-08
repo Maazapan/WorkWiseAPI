@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Offer;
-use App\Models\Company;
+use App\Models\companie;
 use App\Models\User;
 
 class OfferController extends Controller
@@ -19,7 +19,8 @@ class OfferController extends Controller
                 "id" => $offer->id,
                 "user"=> $offer->user,
                 "job"=> $offer->job,
-                "company_id" => $offer->company_id,
+                "companie" => $offer->companie,
+                "categorie" => $offer->categorie,
                 "created_at" => $offer->created_at,
                 "updated_at" => $offer->updated_at,
             ];
@@ -45,9 +46,10 @@ class OfferController extends Controller
         foreach ($offers as $offer) {
             $offerData[] = [
                 "id" => $offer->id,
-                "user_id" => $offer->user_id,
-                "job_id" => $offer->job_id,
-                "company_id" => $offer->company_id,
+                "user" => $offer->user,
+                "job" => $offer->job,
+                "companie" => $offer->companie,
+                "categorie" => $offer->categorie,
             ];
         }
 
@@ -66,9 +68,10 @@ class OfferController extends Controller
         $offer = Offer::where('id', '=', $id)->first();
                 $object = [
                     "id" => $offer->id,
-                    "user_id"=> $offer->user_id,
-                    "job_id"=> $offer->job_id,
-                    "company_id" => $offer->company_id,
+                    "user"=> $offer->user,
+                    "job"=> $offer->job,
+                    "companie" => $offer->companie,
+                    "categorie" => $offer->categorie,
                         "created_at" => $offer->created_at,
                         "updated_at" => $offer->updated_at,
                     ];
@@ -82,7 +85,8 @@ class OfferController extends Controller
             'id' => 'required|numeric',
             'user_id' => 'required|numeric',
             'job_id' => 'required|numeric',
-            'company_id' => 'required|numeric',
+            'companie_id' => 'required|numeric',
+            'categorie_id' => 'required|numeric',
         ]);
    
         $offer = Offer::where('id', '=', $data['id'])->first();
@@ -92,7 +96,8 @@ class OfferController extends Controller
 
             $offer -> user_id = $data['user_id'];
             $offer -> job_id = $data['job_id'];
-            $offer -> company_id = $data['company_id'];
+            $offer -> companie_id = $data['companie_id'];
+            $offer -> categorie_id = $data['categorie_id'];
 
             if($offer->save()){
                 return response() ->json([
@@ -116,13 +121,15 @@ class OfferController extends Controller
         $data = $request -> validate([
             'user_id' => 'required|numeric',
             'job_id' => 'required|numeric',
-            'company_id' => 'required|numeric',
+            'companie_id' => 'required|numeric',
+            'categorie_id'=> 'required|numeric',
         ]);
 
         $job = Offer::create([
             'user_id' => $data['user_id'],
             'job_id' => $data['job_id'],
-            'company_id' => $data['company_id']
+            'companie_id' => $data['companie_id'],
+            'categorie_id' => $data['categorie_id']
         ]);
 
         if($job) {

@@ -15,7 +15,8 @@ return new class extends Migration
             $table->id();
             $table->integer("user_id");
             $table->integer("job_id");
-            $table->integer("company_id");
+            $table->integer("companie_id");
+            $table->integer("categorie_id");
             $table->timestamps();
         });
     }

@@ -3,12 +3,12 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\Api\CompanyController;
-use App\Http\Controllers\Api\JobsController;
+use App\Http\Controllers\Api\CompanieController;
+use App\Http\Controllers\Api\JobController;
 use App\Http\Controllers\Api\OfferController;
-use App\Http\Controllers\Api\CategoriesController;
-use App\Http\Controllers\Api\UsersController;
+use App\Http\Controllers\Api\UserController;
 use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\CategorieController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -25,28 +25,28 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/offers', [OfferController::class, 'list']);
-Route::get('/categories', [CategoriesController::class, 'list']);
-Route::get('/companies', [CompanyController::class, 'list']);
-Route::get('/jobs', [JobsController::class, 'list']);
-Route::get('/users', [UsersController::class, 'list']);
+Route::get('/categories', [CategorieController::class, 'list']);
+Route::get('/companies', [CompanieController::class, 'list']);
+Route::get('/jobs', [JobController::class, 'list']);
+Route::get('/users', [UserController::class, 'list']);
 
-Route::get('/jobs/{id}', [JobsController::class, 'item']);
-Route::get('/companies/{id}', [CompanyController::class, 'item']);
+Route::get('/jobs/{id}', [JobController::class, 'item']);
+Route::get('/companies/{id}', [CompanieController::class, 'item']);
 Route::get('/offers/{id}', [OfferController::class, 'item']);
-Route::get('/categories/{id}', [CategoriesController::class, 'item']);
-Route::get('/users/{id}', [UsersController::class, 'item']);
+Route::get('/categories/{id}', [CategorieController::class, 'item']);
+Route::get('/users/{id}', [UserController::class, 'item']);
 
-Route::post('/companies/create', [CompanyController::class, 'create']);
-Route::post('/jobs/create', [JobsController::class, 'create']);
-Route::post('/categories/create', [CategoriesController::class, 'create']);
+Route::post('/companies/create', [CompanieController::class, 'create']);
+Route::post('/jobs/create', [JobController::class, 'create']);
+Route::post('/categories/create', [CategorieController::class, 'create']);
 Route::post('/offers/create', [OfferController::class, 'create']);
-Route::post('/users/create', [UsersController::class, 'create']);
+Route::post('/users/create', [UserController::class, 'create']);
 
 Route::post('/offers/update', [OfferController::class, 'update']);
-Route::post('/companies/update', [CompanyController::class, 'update']);
-Route::post('/jobs/update', [JobsController::class, 'update']);
-Route::post('/categories/update', [CategoriesController::class, 'update']);
-Route::post('/users/update', [UsersController::class, 'update']);
+Route::post('/companies/update', [CompanieController::class, 'update']);
+Route::post('/jobs/update', [JobController::class, 'update']);
+Route::post('/categories/update', [CategorieController::class, 'update']);
+Route::post('/users/update', [UserController::class, 'update']);
 
 Route::post('/auth/login', [AuthController::class, 'login']);
 

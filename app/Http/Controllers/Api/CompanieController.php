@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Company;
 
 
-class CompanyController extends Controller
+class CompanieController extends Controller
 {
     
     public function list(){

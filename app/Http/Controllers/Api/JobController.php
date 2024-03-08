@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Job;
 
-class JobsController extends Controller
+class JobController extends Controller
 {
     public function list(){
         $jobs = Job::all();
