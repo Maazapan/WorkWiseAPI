@@ -17,6 +17,9 @@ class OfferController extends Controller
         foreach($offers as $offer){
             $object = [
                 "id" => $offer->id,
+                "title" => $offer->title,
+                "description" => $offer->description,
+                "image" => $offer->image,
                 "user"=> $offer->user,
                 "job"=> $offer->job,
                 "companie" => $offer->companie,
@@ -31,25 +34,22 @@ class OfferController extends Controller
         return response()->json($list);
     }
 
-    public function offersUser($userName){
-        $users = User::where('name', 'LIKE', "%{$userName}%")->first();
-        $offers = Offer::where('user_id', '=', $users -> id)->get();
 
-        if ($users->isEmpty()) {
-            return response()->json([
-                'message' => "No se encontraron usuarios con el nombre proporcionado."
-            ]);
-        }
-        
+    public function offersUser($userId){
+        $offers = Offer::where('user_id', '=', $userId)->get();
         $offerData = [];
         
         foreach ($offers as $offer) {
             $offerData[] = [
                 "id" => $offer->id,
-                "user" => $offer->user,
+                "title"=> $offer->title,
+                "description"=> $offer->description,
+                "image" => $offer->image,
                 "job" => $offer->job,
-                "companie" => $offer->companie,
+                "user" => $offer->user,
                 "categorie" => $offer->categorie,
+
+                "companie" => $offer->companie,
             ];
         }
 
@@ -58,16 +58,48 @@ class OfferController extends Controller
                 'message' => "Error al obtener los elementos"
             ]);
         }
+        return response()->json($offerData
+        );
 
-        return response()->json([
-            'offers' => $offers
-        ]);
+    }
+
+    public function offersTitle($title){
+        $offers = Offer::where('title', 'LIKE', "%{$title}%")->get();
+        $offerData = [];
+        
+        foreach ($offers as $offer) {
+            $offerData[] = [
+                "id" => $offer->id,
+                "title"=> $offer->title,
+                "description"=> $offer->description,
+                "image" => $offer->image,
+                "job" => $offer->job,
+                "user" => $offer->user,
+                "categorie" => $offer->categorie,
+
+                "companie" => $offer->companie,
+            ];
+        }
+
+        if(!$offerData){
+            return response()->json([
+                'message' => "Error al obtener los elementos"
+            ]);
+        }
+        return response()->json($offers);
+    }
+
+    public function saveOffer($offerId){
+
     }
 
     public function item($id){
         $offer = Offer::where('id', '=', $id)->first();
                 $object = [
                     "id" => $offer->id,
+                    "title" => $offer->title,
+                    "description" => $offer->description,
+                    "image" => $offer->image,
                     "user"=> $offer->user,
                     "job"=> $offer->job,
                     "companie" => $offer->companie,
@@ -83,6 +115,9 @@ class OfferController extends Controller
     public function update(Request $request){
         $data = $request -> validate([
             'id' => 'required|numeric',
+            'title'=> 'required|string',
+            'description'=> 'required|string',
+            'image' => 'required|string',
             'user_id' => 'required|numeric',
             'job_id' => 'required|numeric',
             'companie_id' => 'required|numeric',
@@ -94,6 +129,9 @@ class OfferController extends Controller
         if($offer) {
             $old = clone $offer;
 
+            $offer -> title = $data['title'];
+            $offer -> description = $data['description'];
+            $offer -> image = $data['image'];
             $offer -> user_id = $data['user_id'];
             $offer -> job_id = $data['job_id'];
             $offer -> companie_id = $data['companie_id'];
@@ -119,13 +157,22 @@ class OfferController extends Controller
 
     public function create(Request $request){
         $data = $request -> validate([
+            'title'=> 'required|string',
+            'description'=> 'required|string',
+            'image' => 'required|string',
             'user_id' => 'required|numeric',
             'job_id' => 'required|numeric',
             'companie_id' => 'required|numeric',
             'categorie_id'=> 'required|numeric',
         ]);
 
+
+        
+
         $job = Offer::create([
+            'title' => $data['title'],
+            'description' => $data['description'],
+            'image' => $data['image'],
             'user_id' => $data['user_id'],
             'job_id' => $data['job_id'],
             'companie_id' => $data['companie_id'],

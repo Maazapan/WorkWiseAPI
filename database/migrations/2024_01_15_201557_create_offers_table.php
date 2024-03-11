@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('offers', function (Blueprint $table) {
             $table->id();
+            $table->string("title");
+            $table->string("description");
+            $table->string("image");
             $table->integer("user_id");
             $table->integer("job_id");
             $table->integer("companie_id");

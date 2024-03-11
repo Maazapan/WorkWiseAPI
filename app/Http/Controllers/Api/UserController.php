@@ -17,6 +17,9 @@ class UserController extends Controller
                 "id" => $user->id,
                 "name" => $user->name,
                 "email"=> $user->email,
+                "profile_photo" => $user->profile_photo,
+                "offers_saved" => $user->offers_saved,
+                "bio" => $user->bio,
                 "created_at" => $user->created_at,
                 "email_verified_at" => $user->email_verified_at,
                 "updated_at" => $user->updated_at,
@@ -34,6 +37,9 @@ class UserController extends Controller
                     "id" => $user->id,
                     "name" => $user->name,
                     "email"=> $user->email,
+                    "profile_photo" => $user->profile_photo,
+                    "offers_saved" => $user->offers_saved,
+                    "bio" => $user->bio,
                     "created_at" => $user->created_at,
                     "email_verified_at" => $user->email_verified_at,
                     "updated_at" => $user->updated_at,
@@ -47,6 +53,9 @@ class UserController extends Controller
             'name' => 'required',
             'email' => 'required',
             'password' => 'required',
+            'profile_photo' => 'required',
+            'offers_saved' => 'required',
+            'bio' => 'required',
         ]);
    
         $user = User::where('id', '=', $data['id'])->first();
@@ -57,6 +66,9 @@ class UserController extends Controller
             $user -> name = $data['name'];
             $user -> email = $data['email'];
             $user -> password = $data['password'];
+            $user -> profile_photo = $data['profile_photo'];
+            $user -> offers_saved = $data['offers_saved'];
+            $user -> bio = $data['bio'];
 
             if($user->save()){
                 return response() ->json([
@@ -81,12 +93,18 @@ class UserController extends Controller
             'name' => 'required',
             'email' => 'required',
             'password' => 'required',
+            'profile_photo'=> 'required',
+            'offers_saved'=> 'required',
+            'bio'=> 'required',
         ]);
 
         $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
-            'password' => $data['password']
+            'password' => $data['password'],
+            'profile_photo' => $data['profile_photo'],
+            'offers_saved' => $data['offers_saved'],
+            'bio' => $data['bio'],
         ]);
 
         if($user) {

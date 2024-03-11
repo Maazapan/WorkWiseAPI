@@ -51,4 +51,5 @@ Route::post('/users/update', [UserController::class, 'update']);
 Route::post('/auth/login', [AuthController::class, 'login']);
 
 
-Route::get('/offers/user/{name}', [OfferController::class, 'offersUser']);
+Route::get('/offers/title/{title}', [OfferController::class, 'offersTitle']);
+Route::get('/offers/user/{title}', [OfferController::class, 'offersUser']);
