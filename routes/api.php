@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\CommentController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -29,12 +30,14 @@ Route::get('/categories', [CategorieController::class, 'list']);
 Route::get('/companies', [CompanieController::class, 'list']);
 Route::get('/jobs', [JobController::class, 'list']);
 Route::get('/users', [UserController::class, 'list']);
+Route::get('/comments', [CommentController::class, 'list']);
 
 Route::get('/jobs/{id}', [JobController::class, 'item']);
 Route::get('/companies/{id}', [CompanieController::class, 'item']);
 Route::get('/offers/{id}', [OfferController::class, 'item']);
 Route::get('/categories/{id}', [CategorieController::class, 'item']);
 Route::get('/users/{id}', [UserController::class, 'item']);
+Route::get('/comments/{id}', [CommentController::class, 'item']);
 
 Route::post('/companies/create', [CompanieController::class, 'create']);
 Route::post('/jobs/create', [JobController::class, 'create']);
@@ -53,3 +56,4 @@ Route::post('/auth/login', [AuthController::class, 'login']);
 
 Route::get('/offers/title/{title}', [OfferController::class, 'offersTitle']);
 Route::get('/offers/user/{title}', [OfferController::class, 'offersUser']);
+Route::get('/comments/offer/{id}', [CommentController::class, 'commentsOffer']);

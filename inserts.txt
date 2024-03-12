@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 INSERT INTO `offers` (`id`, `title`, `description`, `image`, `user_id`, `job_id`, `companie_id`, `categorie_id`, `created_at`, `updated_at`) VALUES
 (1, 'Desarrollador', 'Desarrollador de software para proyectos de tecnología de última generación.', 'desarrollador.png', 1, 1, 1, 1, '2024-03-09 04:39:57', '2024-03-09 04:39:57'),
 (2, 'Analista de datos', 'Analista de datos para análisis estadístico en diseño de aplicaciones.', 'datos.png', 2, 2, 2, 2, '2024-03-09 04:39:57', '2024-03-09 04:39:57'),
@@ -21,78 +20,30 @@ INSERT INTO `offers` (`id`, `title`, `description`, `image`, `user_id`, `job_id`
 (19, 'Desarrollador full-stack', 'Desarrollador full-stack para desarrollo integral de aplicaciones web y móviles.', 'fullstack.png', 19, 19, 19, 19, '2024-03-09 04:39:57', '2024-03-09 04:39:57'),
 (20, 'Analista de sistemas', 'Analista de sistemas para administración de bases de datos empresariales.', 'sistema2.png', 20, 20, 20, 20, '2024-03-09 04:39:57', '2024-03-09 04:39:57');
 
-INSERT INTO users (name, email, email_verified_at, password, profile_photo, offers_saved, bio, remember_token, created_at, updated_at) VALUES
-('John Doe', 'john.doe@example.com', '2024-03-08 10:00:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', 'profile1.jpg', '[1, 2]', 'I am John Doe. I love hiking, playing the guitar, and trying out new recipes.', NULL, '2024-03-08 10:00:00', '2024-03-08 10:00:00'),
-('Jane Smith', 'jane.smith@example.com', '2024-03-08 10:01:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', 'profile2.jpg', '[3, 4]', 'I am Jane Smith. I enjoy painting, reading mystery novels, and playing tennis.', NULL, '2024-03-08 10:01:00', '2024-03-08 10:01:00'),
-('Alice Johnson', 'alice.johnson@example.com', '2024-03-08 10:02:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', 'profile3.jpg', '[5, 6]', 'I am Alice Johnson. My passions include photography, yoga, and trying different cuisines.', NULL, '2024-03-08 10:02:00', '2024-03-08 10:02:00'),
-('Bob Brown', 'bob.brown@example.com', '2024-03-08 10:03:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', 'profile4.jpg', '[7, 8]', 'I am Bob Brown. I love playing basketball, watching documentaries, and gardening in my free time.', NULL, '2024-03-08 10:03:00', '2024-03-08 10:03:00'),
-('Emma Davis', 'emma.davis@example.com', '2024-03-08 10:04:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', 'profile5.jpg', '[9, 10]', 'I am Emma Davis. My favorite hobbies include painting landscapes, going for long walks, and listening to jazz music.', NULL, '2024-03-08 10:04:00', '2024-03-08 10:04:00'),
-('Michael Wilson', 'michael.wilson@example.com', '2024-03-08 10:05:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', 'profile6.jpg', '[11, 12]', 'I am Michael Wilson. I enjoy fishing, watching sci-fi movies, and cooking Italian cuisine.', NULL, '2024-03-08 10:05:00', '2024-03-08 10:05:00'),
-('Olivia Martinez', 'olivia.martinez@example.com', '2024-03-08 10:06:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', 'profile7.jpg', '[13, 14]', 'I am Olivia Martinez. I love playing the piano, hiking in the mountains, and trying out new coffee blends.', NULL, '2024-03-08 10:06:00', '2024-03-08 10:06:00'),
-('William Garcia', 'william.garcia@example.com', '2024-03-08 10:07:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', 'profile8.jpg', '[15, 16]', 'I am William Garcia. My passions include playing chess, watching classic movies, and hiking in the wilderness.', NULL, '2024-03-08 10:07:00', '2024-03-08 10:07:00'),
-('Sophia Rodriguez', 'sophia.rodriguez@example.com', '2024-03-08 10:08:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', 'profile9.jpg', '[17, 18]', 'I am Sophia Rodriguez. I enjoy reading poetry, going to art galleries, and practicing meditation.', NULL, '2024-03-08 10:08:00', '2024-03-08 10:08:00'),
-('Alexander Hernandez', 'alexander.hernandez@example.com', '2024-03-08 10:09:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', 'profile10.jpg', '[19, 20]', 'I am Alexander Hernandez. My favorite pastimes include playing soccer, watching stand-up comedy, and traveling to exotic destinations.', NULL, '2024-03-08 10:09:00', '2024-03-08 10:09:00'),
-('Mia Lopez', 'mia.lopez@example.com', '2024-03-08 10:10:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', 'profile11.jpg', '[1, 2]', 'I am Mia Lopez. I love swimming, listening to pop music, and trying out new dessert recipes.', NULL, '2024-03-08 10:10:00', '2024-03-08 10:10:00'),
-('James Gonzalez', 'james.gonzalez@example.com', '2024-03-08 10:11:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', 'profile12.jpg', '[3, 4]', 'I am James Gonzalez. My hobbies include playing the guitar, watching documentaries, and going camping.', NULL, '2024-03-08 10:11:00', '2024-03-08 10:11:00'),
-('Amelia Perez', 'amelia.perez@example.com', '2024-03-08 10:12:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', 'profile13.jpg', '[5, 6]', 'I am Amelia Perez. I enjoy horseback riding, painting landscapes, and listening to classical music.', NULL, '2024-03-08 10:12:00', '2024-03-08 10:12:00'),
-('Benjamin Torres', 'benjamin.torres@example.com', '2024-03-08 10:13:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', 'profile14.jpg', '[7, 8]', 'I am Benjamin Torres. I love playing basketball, watching action movies, and exploring new restaurants.', NULL, '2024-03-08 10:13:00', '2024-03-08 10:13:00'),
-('Sophie White', 'sophie.white@example.com', '2024-03-08 10:14:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', 'profile15.jpg', '[9, 10]', 'I am Sophie White. My passions include playing the piano, painting, and reading fantasy novels.', NULL, '2024-03-08 10:14:00', '2024-03-08 10:14:00'),
-('Jacob Martinez', 'jacob.martinez@example.com', '2024-03-08 10:15:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', 'profile16.jpg', '[11, 12]', 'I am Jacob Martinez. I enjoy playing video games, hiking in the mountains, and watching science documentaries.', NULL, '2024-03-08 10:15:00', '2024-03-08 10:15:00'),
-('Emily Taylor', 'emily.taylor@example.com', '2024-03-08 10:16:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', 'profile17.jpg', '[13, 14]', 'I am Emily Taylor. I love traveling to new countries, reading historical novels, and practicing yoga.', NULL, '2024-03-08 10:16:00', '2024-03-08 10:16:00'),
-('Daniel Anderson', 'daniel.anderson@example.com', '2024-03-08 10:17:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', 'profile18.jpg', '[15, 16]', 'I am Daniel Anderson. My hobbies include playing soccer, watching comedy shows, and going for bike rides.', NULL, '2024-03-08 10:17:00', '2024-03-08 10:17:00'),
-('Grace Thomas', 'grace.thomas@example.com', '2024-03-08 10:18:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', 'profile19.jpg', '[17, 18]', 'I am Grace Thomas. I enjoy cooking, painting, and attending live music concerts.', NULL, '2024-03-08 10:18:00', '2024-03-08 10:18:00'),
-('Logan Walker', 'logan.walker@example.com', '2024-03-08 10:19:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', 'profile20.jpg', '[19, 20]', 'I am Logan Walker. My favorite activities include playing basketball, painting landscapes, and watching', NULL, '2024-03-08 10:18:00', '2024-03-08 10:18:00');
+INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `profile_photo`, `offers_saved`, `bio`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'John Doe', 'john.doe@example.com', '2024-03-08 17:00:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', 'profile1.jpg', '[1, 2]', 'I am John Doe. I love hiking, playing the guitar, and trying out new recipes.', NULL, '2024-03-08 17:00:00', '2024-03-08 17:00:00'),
+(2, 'Jane Smith', 'jane.smith@example.com', '2024-03-08 17:01:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', 'profile2.jpg', '[3, 4]', 'I am Jane Smith. I enjoy painting, reading mystery novels, and playing tennis.', NULL, '2024-03-08 17:01:00', '2024-03-08 17:01:00'),
+(3, 'Alice Johnson', 'alice.johnson@example.com', '2024-03-08 17:02:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', 'profile3.jpg', '[5, 6]', 'I am Alice Johnson. My passions include photography, yoga, and trying different cuisines.', NULL, '2024-03-08 17:02:00', '2024-03-08 17:02:00'),
+(4, 'Bob Brown', 'bob.brown@example.com', '2024-03-08 17:03:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', 'profile4.jpg', '[7, 8]', 'I am Bob Brown. I love playing basketball, watching documentaries, and gardening in my free time.', NULL, '2024-03-08 17:03:00', '2024-03-08 17:03:00'),
+(5, 'Emma Davis', 'emma.davis@example.com', '2024-03-08 17:04:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', 'profile5.jpg', '[9, 10]', 'I am Emma Davis. My favorite hobbies include painting landscapes, going for long walks, and listening to jazz music.', NULL, '2024-03-08 17:04:00', '2024-03-08 17:04:00'),
+(6, 'Michael Wilson', 'michael.wilson@example.com', '2024-03-08 17:05:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', 'profile6.jpg', '[11, 12]', 'I am Michael Wilson. I enjoy fishing, watching sci-fi movies, and cooking Italian cuisine.', NULL, '2024-03-08 17:05:00', '2024-03-08 17:05:00'),
+(7, 'Olivia Martinez', 'olivia.martinez@example.com', '2024-03-08 17:06:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', 'profile1.jpg', '[13, 14]', 'I am Olivia Martinez. I love playing the piano, hiking in the mountains, and trying out new coffee blends.', NULL, '2024-03-08 17:06:00', '2024-03-08 17:06:00'),
+(8, 'William Garcia', 'william.garcia@example.com', '2024-03-08 17:07:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', 'profile2.jpg', '[15, 16]', 'I am William Garcia. My passions include playing chess, watching classic movies, and hiking in the wilderness.', NULL, '2024-03-08 17:07:00', '2024-03-08 17:07:00'),
+(9, 'Sophia Rodriguez', 'sophia.rodriguez@example.com', '2024-03-08 17:08:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', 'profile3.jpg', '[17, 18]', 'I am Sophia Rodriguez. I enjoy reading poetry, going to art galleries, and practicing meditation.', NULL, '2024-03-08 17:08:00', '2024-03-08 17:08:00'),
+(10, 'Alexander Hernandez', 'alexander.hernandez@example.com', '2024-03-08 17:09:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', 'profile4.jpg', '[19, 20]', 'I am Alexander Hernandez. My favorite pastimes include playing soccer, watching stand-up comedy, and traveling to exotic destinations.', NULL, '2024-03-08 17:09:00', '2024-03-08 17:09:00'),
+(11, 'Mia Lopez', 'mia.lopez@example.com', '2024-03-08 17:10:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', 'profile5.jpg', '[1, 2]', 'I am Mia Lopez. I love swimming, listening to pop music, and trying out new dessert recipes.', NULL, '2024-03-08 17:10:00', '2024-03-08 17:10:00'),
+(12, 'James Gonzalez', 'james.gonzalez@example.com', '2024-03-08 17:11:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', 'profile6.jpg', '[3, 4]', 'I am James Gonzalez. My hobbies include playing the guitar, watching documentaries, and going camping.', NULL, '2024-03-08 17:11:00', '2024-03-08 17:11:00'),
+(13, 'Amelia Perez', 'amelia.perez@example.com', '2024-03-08 17:12:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', 'profile1.jpg', '[5, 6]', 'I am Amelia Perez. I enjoy horseback riding, painting landscapes, and listening to classical music.', NULL, '2024-03-08 17:12:00', '2024-03-08 17:12:00'),
+(14, 'Benjamin Torres', 'benjamin.torres@example.com', '2024-03-08 17:13:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', 'profile2.jpg', '[7, 8]', 'I am Benjamin Torres. I love playing basketball, watching action movies, and exploring new restaurants.', NULL, '2024-03-08 17:13:00', '2024-03-08 17:13:00'),
+(15, 'Sophie White', 'sophie.white@example.com', '2024-03-08 17:14:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', 'profile3.jpg', '[9, 10]', 'I am Sophie White. My passions include playing the piano, painting, and reading fantasy novels.', NULL, '2024-03-08 17:14:00', '2024-03-08 17:14:00'),
+(16, 'Jacob Martinez', 'jacob.martinez@example.com', '2024-03-08 17:15:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', 'profile4.jpg', '[11, 12]', 'I am Jacob Martinez. I enjoy playing video games, hiking in the mountains, and watching science documentaries.', NULL, '2024-03-08 17:15:00', '2024-03-08 17:15:00'),
+(17, 'Emily Taylor', 'emily.taylor@example.com', '2024-03-08 17:16:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', 'profile5.jpg', '[13, 14]', 'I am Emily Taylor. I love traveling to new countries, reading historical novels, and practicing yoga.', NULL, '2024-03-08 17:16:00', '2024-03-08 17:16:00'),
+(18, 'Daniel Anderson', 'daniel.anderson@example.com', '2024-03-08 17:17:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', 'profile6.jpg', '[15, 16]', 'I am Daniel Anderson. My hobbies include playing soccer, watching comedy shows, and going for bike rides.', NULL, '2024-03-08 17:17:00', '2024-03-08 17:17:00'),
+(19, 'Grace Thomas', 'grace.thomas@example.com', '2024-03-08 17:18:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', 'profile2.jpg', '[17, 18]', 'I am Grace Thomas. I enjoy cooking, painting, and attending live music concerts.', NULL, '2024-03-08 17:18:00', '2024-03-08 17:18:00'),
+(20, 'Logan Walker', 'logan.walker@example.com', '2024-03-08 17:19:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', 'profile1.jpg', '[19, 20]', 'I am Logan Walker. My favorite activities include playing basketball, painting landscapes, and watching', NULL, '2024-03-08 17:18:00', '2024-03-08 17:18:00');
 
 
 INSERT INTO companies (id, name, direction, phone, created_at, updated_at) VALUES
-=======
-INSERT INTO offers (user_id, job_id, companie_id, categorie_id, created_at, updated_at) VALUES
-(1, 1, 1, 1, '2024-03-08 10:00:00', '2024-03-08 10:00:00'),
-(2, 2, 2, 2, '2024-03-08 10:01:00', '2024-03-08 10:01:00'),
-(3, 3, 3, 3, '2024-03-08 10:02:00', '2024-03-08 10:02:00'),
-(4, 4, 4, 4, '2024-03-08 10:03:00', '2024-03-08 10:03:00'),
-(5, 5, 5, 5, '2024-03-08 10:04:00', '2024-03-08 10:04:00'),
-(6, 6, 6, 6, '2024-03-08 10:05:00', '2024-03-08 10:05:00'),
-(7, 7, 7, 7, '2024-03-08 10:06:00', '2024-03-08 10:06:00'),
-(8, 8, 8, 8, '2024-03-08 10:07:00', '2024-03-08 10:07:00'),
-(9, 9, 9, 9, '2024-03-08 10:08:00', '2024-03-08 10:08:00'),
-(10, 10, 10, 10, '2024-03-08 10:09:00', '2024-03-08 10:09:00'),
-(11, 11, 11, 11, '2024-03-08 10:10:00', '2024-03-08 10:10:00'),
-(12, 12, 12, 12, '2024-03-08 10:11:00', '2024-03-08 10:11:00'),
-(13, 13, 13, 13, '2024-03-08 10:12:00', '2024-03-08 10:12:00'),
-(14, 14, 14, 14, '2024-03-08 10:13:00', '2024-03-08 10:13:00'),
-(15, 15, 15, 15, '2024-03-08 10:14:00', '2024-03-08 10:14:00'),
-(16, 16, 16, 16, '2024-03-08 10:15:00', '2024-03-08 10:15:00'),
-(17, 17, 17, 17, '2024-03-08 10:16:00', '2024-03-08 10:16:00'),
-(18, 18, 18, 18, '2024-03-08 10:17:00', '2024-03-08 10:17:00'),
-(19, 19, 19, 19, '2024-03-08 10:18:00', '2024-03-08 10:18:00'),
-(20, 20, 20, 20, '2024-03-08 10:19:00', '2024-03-08 10:19:00');
-
-INSERT INTO users (name, email, email_verified_at, password, remember_token, created_at, updated_at) VALUES
-('John Doe', 'john.doe@example.com', '2024-03-08 10:00:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', NULL, '2024-03-08 10:00:00', '2024-03-08 10:00:00'),
-('Jane Smith', 'jane.smith@example.com', '2024-03-08 10:01:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', NULL, '2024-03-08 10:01:00', '2024-03-08 10:01:00'),
-('Alice Johnson', 'alice.johnson@example.com', '2024-03-08 10:02:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', NULL, '2024-03-08 10:02:00', '2024-03-08 10:02:00'),
-('Bob Brown', 'bob.brown@example.com', '2024-03-08 10:03:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', NULL, '2024-03-08 10:03:00', '2024-03-08 10:03:00'),
-('Emma Davis', 'emma.davis@example.com', '2024-03-08 10:04:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', NULL, '2024-03-08 10:04:00', '2024-03-08 10:04:00'),
-('Michael Wilson', 'michael.wilson@example.com', '2024-03-08 10:05:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', NULL, '2024-03-08 10:05:00', '2024-03-08 10:05:00'),
-('Olivia Martinez', 'olivia.martinez@example.com', '2024-03-08 10:06:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', NULL, '2024-03-08 10:06:00', '2024-03-08 10:06:00'),
-('William Garcia', 'william.garcia@example.com', '2024-03-08 10:07:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', NULL, '2024-03-08 10:07:00', '2024-03-08 10:07:00'),
-('Sophia Rodriguez', 'sophia.rodriguez@example.com', '2024-03-08 10:08:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', NULL, '2024-03-08 10:08:00', '2024-03-08 10:08:00'),
-('Alexander Hernandez', 'alexander.hernandez@example.com', '2024-03-08 10:09:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', NULL, '2024-03-08 10:09:00', '2024-03-08 10:09:00'),
-('Mia Lopez', 'mia.lopez@example.com', '2024-03-08 10:10:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', NULL, '2024-03-08 10:10:00', '2024-03-08 10:10:00'),
-('James Gonzalez', 'james.gonzalez@example.com', '2024-03-08 10:11:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', NULL, '2024-03-08 10:11:00', '2024-03-08 10:11:00'),
-('Amelia Perez', 'amelia.perez@example.com', '2024-03-08 10:12:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', NULL, '2024-03-08 10:12:00', '2024-03-08 10:12:00'),
-('Benjamin Torres', 'benjamin.torres@example.com', '2024-03-08 10:13:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', NULL, '2024-03-08 10:13:00', '2024-03-08 10:13:00'),
-('Sophie White', 'sophie.white@example.com', '2024-03-08 10:14:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', NULL, '2024-03-08 10:14:00', '2024-03-08 10:14:00'),
-('Jacob Martinez', 'jacob.martinez@example.com', '2024-03-08 10:15:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', NULL, '2024-03-08 10:15:00', '2024-03-08 10:15:00'),
-('Emily Taylor', 'emily.taylor@example.com', '2024-03-08 10:16:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', NULL, '2024-03-08 10:16:00', '2024-03-08 10:16:00'),
-('Daniel Anderson', 'daniel.anderson@example.com', '2024-03-08 10:17:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', NULL, '2024-03-08 10:17:00', '2024-03-08 10:17:00'),
-('Grace Thomas', 'grace.thomas@example.com', '2024-03-08 10:18:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', NULL, '2024-03-08 10:18:00', '2024-03-08 10:18:00'),
-('Logan Walker', 'logan.walker@example.com', '2024-03-08 10:19:00', '$2y$12$KnG23/RSP/PTz7iYp04/Aup1G2mxjIW.WCdAQTjKtEjmojiCUccOm', NULL, '2024-03-08 10:19:00', '2024-03-08 10:19:00');
-
-
-INSERT INTO companies (id, nombre, direccion, telefono, fecha_creacion, fecha_actualizacion) VALUES
->>>>>>> ea569367a275c5857599fb5321770ea30413bd91
 (1, 'ABC', 'Calle A #123', '1234567890', '2024-03-08 10:00:00', '2024-03-08 10:00:00'),
 (2, 'XYZ', 'Calle B #456', '2345678901', '2024-03-08 10:01:00', '2024-03-08 10:01:00'),
 (3, 'Sunshine', 'Calle C #789', '3456789012', '2024-03-08 10:02:00', '2024-03-08 10:02:00'),
@@ -114,7 +65,6 @@ INSERT INTO companies (id, nombre, direccion, telefono, fecha_creacion, fecha_ac
 (19, 'Supernova', 'Calle S #567', '9012345678', '2024-03-08 10:18:00', '2024-03-08 10:18:00'),
 (20, 'Galactic', 'Calle T #890', '0123456789', '2024-03-08 10:19:00', '2024-03-08 10:19:00');
 
-<<<<<<< HEAD
 
 INSERT INTO jobs (salary, description, address, requirements, date, created_at, updated_at) VALUES
 ('3000', 'Desarrollador de software para proyectos de tecnología de última generación, incluyendo aplicaciones móviles y web.', 'Calle 123, Ciudad A', 'Experiencia en desarrollo web y móvil', '2024-03-08', NOW(), NOW()),
@@ -137,29 +87,6 @@ INSERT INTO jobs (salary, description, address, requirements, date, created_at, 
 ('3000', 'Especialista en seguridad informática para auditoría de sistemas y protección de infraestructuras críticas en entornos corporativos.', 'Avenida 567, Ciudad R', 'Certificaciones en seguridad, experiencia en auditoría de sistemas', '2024-03-25', NOW(), NOW()),
 ('3100', 'Desarrollador full-stack para desarrollo integral de aplicaciones web y móviles, desde el front-end hasta el back-end.', 'Calle 890, Ciudad S', 'Experiencia en desarrollo web, conocimientos en tecnologías full-stack', '2024-03-26', NOW(), NOW()),
 ('3300', 'Analista de sistemas para administración y optimización de bases de datos empresariales y sistemas de información.', 'Avenida 123, Ciudad T', 'Conocimientos en bases de datos, experiencia en administración de sistemas', '2024-03-27', NOW(), NOW());
-=======
-INSERT INTO jobs (salary, description, address, requirements, date, created_at, updated_at) VALUES
-('3000', 'Desarrollador de software para proyectos de tecnología', 'Calle 123, Ciudad A', 'Experiencia en desarrollo web', '2024-03-08', NOW(), NOW()),
-('2500', 'Analista de datos para análisis estadístico en diseño de aplicaciones', 'Avenida Principal, Ciudad B', 'Conocimientos en SQL y estadísticas', '2024-03-09', NOW(), NOW()),
-('4000', 'Ingeniero de sistemas para implementación de redes de seguridad', 'Avenida Central, Ciudad C', 'Experiencia en redes y seguridad', '2024-03-10', NOW(), NOW()),
-('3500', 'Diseñador gráfico especializado en diseño de interfaces de usuario', 'Calle 456, Ciudad D', 'Dominio de herramientas de diseño', '2024-03-11', NOW(), NOW()),
-('2800', 'Administrador de bases de datos para gestión de información financiera', 'Avenida Norte, Ciudad E', 'Experiencia en administración de sistemas', '2024-03-12', NOW(), NOW()),
-('3200', 'Desarrollador móvil para aplicaciones de redes sociales', 'Calle 789, Ciudad F', 'Conocimientos en desarrollo de aplicaciones móviles', '2024-03-13', NOW(), NOW()),
-('2700', 'Especialista en redes para configuración de infraestructura de red', 'Avenida Sur, Ciudad G', 'Certificaciones en Cisco', '2024-03-14', NOW(), NOW()),
-('3800', 'Analista de sistemas para análisis de datos en proyectos de desarrollo', 'Calle 012, Ciudad H', 'Experiencia en análisis de sistemas', '2024-03-15', NOW(), NOW()),
-('2600', 'Diseñador web para diseño de páginas de comercio electrónico', 'Avenida Este, Ciudad I', 'Dominio de HTML, CSS y JavaScript', '2024-03-16', NOW(), NOW()),
-('2900', 'Técnico de soporte para soporte técnico en sistemas informáticos', 'Calle 345, Ciudad J', 'Experiencia en atención al cliente', '2024-03-17', NOW(), NOW()),
-('3100', 'Ingeniero de software para desarrollo de aplicaciones de análisis financiero', 'Calle 456, Ciudad K', 'Experiencia en desarrollo de aplicaciones', '2024-03-18', NOW(), NOW()),
-('3300', 'Analista financiero para análisis de datos contables', 'Avenida 789, Ciudad L', 'Conocimientos en contabilidad y finanzas', '2024-03-19', NOW(), NOW()),
-('2900', 'Desarrollador front-end para diseño de interfaces de usuario web', 'Calle 012, Ciudad M', 'Experiencia en desarrollo web', '2024-03-20', NOW(), NOW()),
-('2800', 'Diseñador de UI/UX para diseño de aplicaciones móviles', 'Avenida 345, Ciudad N', 'Dominio de herramientas de diseño', '2024-03-21', NOW(), NOW()),
-('3400', 'Ingeniero de redes para configuración de infraestructura de comunicaciones', 'Calle 678, Ciudad O', 'Experiencia en configuración de redes', '2024-03-22', NOW(), NOW()),
-('3700', 'Desarrollador back-end para desarrollo de sistemas de gestión de bases de datos', 'Avenida 901, Ciudad P', 'Conocimientos en bases de datos', '2024-03-23', NOW(), NOW()),
-('3600', 'Analista de negocio para análisis de datos en proyectos empresariales', 'Calle 234, Ciudad Q', 'Experiencia en análisis de datos', '2024-03-24', NOW(), NOW()),
-('3000', 'Especialista en seguridad informática para auditoría de sistemas', 'Avenida 567, Ciudad R', 'Certificaciones en seguridad', '2024-03-25', NOW(), NOW()),
-('3100', 'Desarrollador full-stack para desarrollo integral de aplicaciones web', 'Calle 890, Ciudad S', 'Experiencia en desarrollo web', '2024-03-26', NOW(), NOW()),
-('3300', 'Analista de sistemas para administración de bases de datos', 'Avenida 123, Ciudad T', 'Conocimientos en bases de datos', '2024-03-27', NOW(), NOW());
->>>>>>> ea569367a275c5857599fb5321770ea30413bd91
 
 
 INSERT INTO categories (name, created_at, updated_at) VALUES
@@ -183,3 +110,46 @@ INSERT INTO categories (name, created_at, updated_at) VALUES
 ('Sistemas', NOW(), NOW()),
 ('Full-Stack', NOW(), NOW()),
 ('Negocio', NOW(), NOW());
+
+
+INSERT INTO comments (offer_id, user_id, comment, created_at, updated_at) VALUES 
+(1, 1, 'Interesante oportunidad laboral.', NOW(), NOW()),
+(2, 2, 'Excelente ambiente laboral.', NOW(), NOW()),
+(3, 3, 'Interesado en crecer dentro de la empresa.', NOW(), NOW()),
+(4, 4, 'Resonó con los valores de la empresa.', NOW(), NOW()),
+(5, 5, 'Listo para enfrentar nuevos desafíos.', NOW(), NOW()),
+(6, 6, 'Perfecto para el desarrollo profesional.', NOW(), NOW()),
+(7, 7, 'Inspirado por la visión de la empresa.', NOW(), NOW()),
+(8, 8, 'Cultura de trabajo inclusiva.', NOW(), NOW()),
+(9, 9, 'Emocionado por las oportunidades de crecimiento.', NOW(), NOW()),
+(10, 10, 'Encajaré perfectamente en el equipo.', NOW(), NOW()),
+(11, 11, 'Colaborativo y acogedor.', NOW(), NOW()),
+(12, 12, 'Enfoque innovador y dispuesto a contribuir.', NOW(), NOW()),
+(13, 13, 'Oportunidades de desarrollo profesionales.', NOW(), NOW()),
+(14, 14, 'Impresionado por la diversidad y la inclusión.', NOW(), NOW()),
+(15, 15, 'Resonancia con la visión de la empresa.', NOW(), NOW()),
+(16, 16, 'Emocionado por el entorno dinámico.', NOW(), NOW()),
+(17, 17, 'Pasión y compromiso contagiosos.', NOW(), NOW()),
+(18, 18, 'Impacto positivo en la vida de las personas.', NOW(), NOW()),
+(19, 19, 'Cultura de trabajo flexible y equilibrada.', NOW(), NOW()),
+(20, 20, 'Oportunidad perfecta para crecer profesionalmente.', NOW(), NOW()),
+(1, 2, 'Interesante oportunidad laboral.', NOW(), NOW()),
+(2, 4, 'Excelente ambiente laboral.', NOW(), NOW()),
+(3, 5, 'Interesado en crecer dentro de la empresa.', NOW(), NOW()),
+(4, 7, 'Resonó con los valores de la empresa.', NOW(), NOW()),
+(5, 1, 'Listo para enfrentar nuevos desafíos.', NOW(), NOW()),
+(6, 8, 'Perfecto para el desarrollo profesional.', NOW(), NOW()),
+(7, 10, 'Inspirado por la visión de la empresa.', NOW(), NOW()),
+(8, 11, 'Cultura de trabajo inclusiva.', NOW(), NOW()),
+(9, 12, 'Emocionado por las oportunidades de crecimiento.', NOW(), NOW()),
+(10, 13, 'Encajaré perfectamente en el equipo.', NOW(), NOW()),
+(11, 14, 'Colaborativo y acogedor.', NOW(), NOW()),
+(12, 16, 'Enfoque innovador y dispuesto a contribuir.', NOW(), NOW()),
+(13, 15, 'Oportunidades de desarrollo profesionales.', NOW(), NOW()),
+(14, 17, 'Impresionado por la diversidad y la inclusión.', NOW(), NOW()),
+(15, 18, 'Resonancia con la visión de la empresa.', NOW(), NOW()),
+(16, 19, 'Emocionado por el entorno dinámico.', NOW(), NOW()),
+(17, 2, 'Pasión y compromiso contagiosos.', NOW(), NOW()),
+(18, 20, 'Impacto positivo en la vida de las personas.', NOW(), NOW()),
+(19, 11, 'Cultura de trabajo flexible y equilibrada.', NOW(), NOW()),
+(20, 12, 'Oportunidad perfecta para crecer profesionalmente.', NOW(), NOW());
