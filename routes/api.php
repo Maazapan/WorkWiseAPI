@@ -10,16 +10,7 @@ use App\Http\Controllers\Api\OfferController;
 use App\Http\Controllers\Api\UserController;
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\CategorieController;
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "api" middleware group. Make something great!
-|
-*/
+
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
@@ -52,8 +43,11 @@ Route::post('/categories/update', [CategorieController::class, 'update']);
 Route::post('/users/update', [UserController::class, 'update']);
 
 Route::post('/auth/login', [AuthController::class, 'login']);
-
-
 Route::get('/offers/title/{title}', [OfferController::class, 'offersTitle']);
+Route::get('/offer/recents', [OfferController::class, 'recentOffers']);
+
 Route::get('/offers/user/{title}', [OfferController::class, 'offersUser']);
+Route::get('/offers/saved/{id}', [OfferController::class, 'offerSaved']);
 Route::get('/comments/offer/{id}', [CommentController::class, 'commentsOffer']);
+
+

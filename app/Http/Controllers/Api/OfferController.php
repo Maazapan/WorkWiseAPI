@@ -34,7 +34,6 @@ class OfferController extends Controller
         return response()->json($list);
     }
 
-
     public function offersUser($userId){
         $offers = Offer::where('user_id', '=', $userId)->get();
         $offerData = [];
@@ -60,7 +59,6 @@ class OfferController extends Controller
         }
         return response()->json($offerData
         );
-
     }
 
     public function offersTitle($title){
@@ -89,8 +87,58 @@ class OfferController extends Controller
         return response()->json($offers);
     }
 
+
+    public function recentOffers(){
+        $offers = Offer::orderBy('created_at', 'desc')->take(5)->get();
+        $offerData = [];
+        
+        foreach ($offers as $offer) {
+            $offerData[] = [
+                "id" => $offer->id,
+                "title"=> $offer->title,
+                "description"=> $offer->description,
+                "image" => $offer->image,
+                "job" => $offer->job,
+                "user" => $offer->user,
+                "categorie" => $offer->categorie,
+                "companie" => $offer->companie,
+            ];
+        }
+
+        if(!$offerData){
+            return response()->json([
+                'message' => "Error al obtener los elementos"
+            ]);
+        }
+        return response()->json($offerData);
+    }
+
     public function saveOffer($offerId){
 
+    }
+
+    public function offerSaved($userId){
+        $user = User::where("id",  "=", $userId)->first();
+        $userObject = ["offers_saved" => $user->offers_saved];
+
+        $offers = Offer::whereIn('id', $userObject['offers_saved'])->get();
+        $offerData = [];
+
+        foreach ($offers as $offer) {
+            $offerData[] = [
+                "id" => $offer->id,
+                "title"=> $offer->title,
+                "description"=> $offer->description,
+                "image" => $offer->image,
+                "job" => $offer->job,
+                "user" => $offer->user,
+                "categorie" => $offer->categorie,
+                "companie" => $offer->companie,
+            ];
+        }
+
+
+        return response()->json($offerData);
     }
 
     public function item($id){
