@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\CommentController;
+use App\Http\Controllers\Api\OfferSaveController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -43,11 +44,16 @@ Route::post('/categories/update', [CategorieController::class, 'update']);
 Route::post('/users/update', [UserController::class, 'update']);
 
 Route::post('/auth/login', [AuthController::class, 'login']);
-Route::get('/offers/title/{title}', [OfferController::class, 'offersTitle']);
+Route::get('/offer/title/{title}', [OfferController::class, 'offersTitle']);
 Route::get('/offer/recents', [OfferController::class, 'recentOffers']);
+Route::get('/offer/saves', [OfferSaveController::class, 'list']);
+Route::get('/offer/saves/user/{userId}', [OfferSaveController::class, 'savedAllOfferUser']);
+Route::get('/offer/saves/user/recent/{userId}', [OfferSaveController::class, 'savedRecentOfferUser']);
+Route::get('/offer/saves/{id}', [OfferSaveController::class, 'item']);
+
+Route::post('/offer/offer_saved', [OfferSaveController::class, 'isOfferSaved']);
 
 Route::get('/offers/user/{title}', [OfferController::class, 'offersUser']);
-Route::get('/offers/saved/{id}', [OfferController::class, 'offerSaved']);
 Route::get('/comments/offer/{id}', [CommentController::class, 'commentsOffer']);
 
 

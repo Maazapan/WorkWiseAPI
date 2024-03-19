@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Models\OfferSave;
 use Illuminate\Http\Request;
 use App\Models\Offer;
 use App\Models\companie;
@@ -49,6 +50,7 @@ class OfferController extends Controller
                 "categorie" => $offer->categorie,
 
                 "companie" => $offer->companie,
+                "created_at" => $offer->created_at,
             ];
         }
 
@@ -76,6 +78,7 @@ class OfferController extends Controller
                 "categorie" => $offer->categorie,
 
                 "companie" => $offer->companie,
+                "created_at" => $offer->created_at,
             ];
         }
 
@@ -86,6 +89,7 @@ class OfferController extends Controller
         }
         return response()->json($offers);
     }
+
 
 
     public function recentOffers(){
@@ -102,6 +106,7 @@ class OfferController extends Controller
                 "user" => $offer->user,
                 "categorie" => $offer->categorie,
                 "companie" => $offer->companie,
+                "created_at" => $offer->created_at,
             ];
         }
 
@@ -115,30 +120,6 @@ class OfferController extends Controller
 
     public function saveOffer($offerId){
 
-    }
-
-    public function offerSaved($userId){
-        $user = User::where("id",  "=", $userId)->first();
-        $userObject = ["offers_saved" => $user->offers_saved];
-
-        $offers = Offer::whereIn('id', $userObject['offers_saved'])->get();
-        $offerData = [];
-
-        foreach ($offers as $offer) {
-            $offerData[] = [
-                "id" => $offer->id,
-                "title"=> $offer->title,
-                "description"=> $offer->description,
-                "image" => $offer->image,
-                "job" => $offer->job,
-                "user" => $offer->user,
-                "categorie" => $offer->categorie,
-                "companie" => $offer->companie,
-            ];
-        }
-
-
-        return response()->json($offerData);
     }
 
     public function item($id){
