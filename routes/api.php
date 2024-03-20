@@ -37,6 +37,7 @@ Route::post('/categories/create', [CategorieController::class, 'create']);
 Route::post('/offers/create', [OfferController::class, 'create']);
 Route::post('/users/create', [UserController::class, 'create']);
 
+
 Route::post('/offers/update', [OfferController::class, 'update']);
 Route::post('/companies/update', [CompanieController::class, 'update']);
 Route::post('/jobs/update', [JobController::class, 'update']);
@@ -47,13 +48,17 @@ Route::post('/auth/login', [AuthController::class, 'login']);
 Route::get('/offer/title/{title}', [OfferController::class, 'offersTitle']);
 Route::get('/offer/recents', [OfferController::class, 'recentOffers']);
 Route::get('/offer/saves', [OfferSaveController::class, 'list']);
-Route::get('/offer/saves/user/{userId}', [OfferSaveController::class, 'savedAllOfferUser']);
 Route::get('/offer/saves/user/recent/{userId}', [OfferSaveController::class, 'savedRecentOfferUser']);
 Route::get('/offer/saves/{id}', [OfferSaveController::class, 'item']);
 
-Route::post('/offer/offer_saved', [OfferSaveController::class, 'isOfferSaved']);
+
 
 Route::get('/offers/user/{title}', [OfferController::class, 'offersUser']);
 Route::get('/comments/offer/{id}', [CommentController::class, 'commentsOffer']);
 
 
+Route::post('/offers_save/create', [OfferSaveController::class, 'create']);
+Route::post('/offers_save/delete', [OfferSaveController::class, 'delete']);
+Route::post('/offers_save/saved', [OfferSaveController::class, 'isOfferSaved']);
+Route::get('/offers_save/user/{userId}', [OfferSaveController::class, 'savedAllOfferUser']);
+Route::get('/offers_save/user/rencent/{userId}', [OfferSaveController::class, 'savedRecentOfferUser']);

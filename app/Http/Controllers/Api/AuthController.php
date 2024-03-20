@@ -23,7 +23,6 @@ class AuthController extends Controller
                 'success' => false
             ], 401);
         }
-
         $accessToken = auth()->user()->createToken('authToken')->accessToken;
 
         return response()->json([

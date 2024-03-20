@@ -66,11 +66,11 @@ class OfferSaveController extends Controller
         $offerSave = OfferSave::where('user_id', '=', $request->user_id)->where('offer_id', '=', $request->offer_id)->first();
         if($offerSave){
             return response()->json([
-                'message' => "Oferta guardada"
+                'saved' => 'true'
             ]);
         }
         return response()->json([
-            'message' => "Oferta no guardada"
+            "saved" => "false",
         ]);
 
     }
@@ -117,5 +117,54 @@ class OfferSaveController extends Controller
                     "updated_at" => $offer->updated_at,
                 ];
             return response()->json($object);
+    }
+
+    public function create(Request $request){
+        $data = $request -> validate([
+            'user_id'=> 'required|numeric',
+            'offer_id'=> 'required|numeric',
+        ]);
+
+
+        $offer = OfferSave::create([
+            'user_id' => $data['user_id'],
+            'offer_id' => $data['offer_id'],
+        ]);
+
+        if($offer) {
+            return response() ->json([
+                'message' => 'Oferta creada correctamente',
+                'data' => $offer
+            ]);
+
+        }else{
+            return response() ->json([
+                'message' => 'Error al crear un oferta',
+            ]);
+        }
+    }
+
+    public function delete(Request $request){
+        $data = $request -> validate([
+            'user_id'=> 'required|numeric',
+            'offer_id'=> 'required|numeric',
+        ]);
+
+        $offer = OfferSave::where('user_id', '=', $data['user_id'])
+        ->where('offer_id', '=', $data['offer_id'])
+        ->first();
+
+        if($offer) {
+            $offer->delete();
+
+            return response() ->json([
+                'message' => 'Oferta eliminada correctamente'
+            ]);
+
+        }else{
+            return response() ->json([
+                'message' => 'Error al eliminar',
+            ]);
+        }
     }
 }
