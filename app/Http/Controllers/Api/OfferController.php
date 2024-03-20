@@ -184,6 +184,25 @@ class OfferController extends Controller
         }
     }
 
+    public function delete($id){
+        $offer = Offer::where('id', '=', $id)->first();
+
+        if($offer) {
+            $old = clone $offer;
+
+            if($offer->delete()){
+                return response() ->json([
+                    'message' => 'Oferta eliminada correctamente',
+                    'old' => $old,
+                ]);
+            }else{
+                return response() ->json([
+                    'message' => 'Error al eliminar una oferta',
+                ]);
+            }
+        }
+    }
+
     public function create(Request $request){
         $data = $request -> validate([
             'title'=> 'required|string',

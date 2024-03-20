@@ -45,6 +45,8 @@ Route::post('/categories/update', [CategorieController::class, 'update']);
 Route::post('/users/update', [UserController::class, 'update']);
 
 Route::post('/auth/login', [AuthController::class, 'login']);
+Route::post('/auth/register', [AuthController::class, 'register']);
+
 Route::get('/offer/title/{title}', [OfferController::class, 'offersTitle']);
 Route::get('/offer/recents', [OfferController::class, 'recentOffers']);
 Route::get('/offer/saves', [OfferSaveController::class, 'list']);

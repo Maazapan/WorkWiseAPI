@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class AuthController extends Controller
@@ -42,4 +43,21 @@ class AuthController extends Controller
             'message' => 'Successfully logged out'
         ]);
     }
+
+    public function register(Request $request) {
+        $validatedData = $request->validate([
+            'name' => 'required|max:55',
+            'email' => 'required',
+            'password' => 'required',
+            'profile_photo' => 'required|max:55',
+            'bio' => 'required'
+        ]);
+
+        $validatedData['password'] = bcrypt($request->password);
+        $user = User::create($validatedData);
+        $accessToken = $user->createToken('authToken')->accessToken;
+
+        return response([ 'profile' => $user, 'access_token' => $accessToken]);
+    }
+
 }
