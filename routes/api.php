@@ -52,12 +52,13 @@ Route::get('/offer/recents', [OfferController::class, 'recentOffers']);
 Route::get('/offer/saves', [OfferSaveController::class, 'list']);
 Route::get('/offer/saves/user/recent/{userId}', [OfferSaveController::class, 'savedRecentOfferUser']);
 Route::get('/offer/saves/{id}', [OfferSaveController::class, 'item']);
+Route::post('/offer/delete', [OfferController::class, 'delete']);
 
 
 
-Route::get('/offers/user/{title}', [OfferController::class, 'offersUser']);
+Route::get('/offers/user/{id}', [OfferController::class, 'offersUser']);
 Route::get('/comments/offer/{id}', [CommentController::class, 'commentsOffer']);
-
+Route::post('/companie/user/', [CompanieController::class, 'companieUser']);
 
 Route::post('/offers_save/create', [OfferSaveController::class, 'create']);
 Route::post('/offers_save/delete', [OfferSaveController::class, 'delete']);

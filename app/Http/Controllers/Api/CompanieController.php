@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Models\Offer;
 use Illuminate\Http\Request;
 use App\Models\Company;
 
@@ -102,5 +103,23 @@ class CompanieController extends Controller
                 'message' => 'Error al crear un compañia',
             ]);
         }
+    }
+
+
+    public function companieUser(Request $request){
+        $offers = Offer::where('user_id', '=', $request['user_id'])->first();
+        $companie = Company::where('id', '=', $offers->companie_id)->first();
+
+        if(!$offers){
+            return response()->json([
+                'data' => 'false',
+               
+            ]);
+        }
+
+        return response()->json([
+            'data' => 'true',
+            'companie' => $companie
+        ]);
     }
 }

@@ -16,6 +16,10 @@ class OfferController extends Controller
         $list = [];
 
         foreach($offers as $offer){
+            $categoryName= $offer->categorie->name;
+
+            if($categoryName != "example"){
+                
             $object = [
                 "id" => $offer->id,
                 "title" => $offer->title,
@@ -30,6 +34,7 @@ class OfferController extends Controller
             ];
             
             array_push($list, $object);
+            }
         }
 
         return response()->json($list);
@@ -40,6 +45,7 @@ class OfferController extends Controller
         $offerData = [];
         
         foreach ($offers as $offer) {
+
             $offerData[] = [
                 "id" => $offer->id,
                 "title"=> $offer->title,
@@ -48,7 +54,6 @@ class OfferController extends Controller
                 "job" => $offer->job,
                 "user" => $offer->user,
                 "categorie" => $offer->categorie,
-
                 "companie" => $offer->companie,
                 "created_at" => $offer->created_at,
             ];
@@ -68,6 +73,9 @@ class OfferController extends Controller
         $offerData = [];
         
         foreach ($offers as $offer) {
+            $categoryName = $offer->categorie->name;
+
+            if($categoryName != "example"){
             $offerData[] = [
                 "id" => $offer->id,
                 "title"=> $offer->title,
@@ -80,6 +88,7 @@ class OfferController extends Controller
                 "companie" => $offer->companie,
                 "created_at" => $offer->created_at,
             ];
+        }
         }
 
         if(!$offerData){
@@ -97,6 +106,8 @@ class OfferController extends Controller
         $offerData = [];
         
         foreach ($offers as $offer) {
+            $categoryName = $offer->categorie->name;
+            if($categoryName != "example"){
             $offerData[] = [
                 "id" => $offer->id,
                 "title"=> $offer->title,
@@ -109,6 +120,7 @@ class OfferController extends Controller
                 "created_at" => $offer->created_at,
             ];
         }
+    }
 
         if(!$offerData){
             return response()->json([
@@ -184,8 +196,8 @@ class OfferController extends Controller
         }
     }
 
-    public function delete($id){
-        $offer = Offer::where('id', '=', $id)->first();
+    public function delete(Request $request){
+        $offer = Offer::where('id', '=', $request->id)->first();
 
         if($offer) {
             $old = clone $offer;

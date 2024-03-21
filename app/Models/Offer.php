@@ -15,7 +15,7 @@ class Offer extends Model
         'image',
         'user_id',
         'job_id',
-        'company_id',
+        'companie_id',
         'categorie_id',
     ];
 
